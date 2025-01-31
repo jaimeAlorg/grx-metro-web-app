@@ -1,0 +1,14 @@
+@use "@angular/material" as mat;
+
+.header-container {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		color: var(--mat-sys-primary);
+		font: var(--mat-sys-display-large);
+	}
+}
