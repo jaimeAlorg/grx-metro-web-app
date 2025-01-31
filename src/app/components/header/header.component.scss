@@ -1,14 +1,38 @@
 @use "@angular/material" as mat;
 
+$breakpoint-medium: 600px;
+$breakpoint-small: 450px;
+
 .header-container {
 	display: flex;
 	flex-direction: row;
 	gap: 10px;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	height: 100%;
 
 	h1 {
 		color: var(--mat-sys-primary);
 		font: var(--mat-sys-display-large);
+
+		@media (max-width: $breakpoint-medium) {
+			font: var(--mat-sys-display-medium);
+		}
+
+		@media (max-width: $breakpoint-small) {
+			font: var(--mat-sys-display-small);
+		}
+	}
+}
+
+.logo {
+	width: 100px;
+	height: 100px;
+	vertical-align: middle;
+
+	@media (max-width: $breakpoint-small) {
+		width: 75px;
+		height: 75px;
 	}
 }
