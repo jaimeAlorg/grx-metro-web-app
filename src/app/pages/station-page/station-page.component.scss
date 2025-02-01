@@ -3,5 +3,63 @@
 	flex-direction: column;
 	height: 100%;
 	width: 100%;
-	margin-top: 24px;
+}
+
+.station-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 16px;
+
+	h1 {
+		margin-top: 0;
+		margin-bottom: 0;
+		font: var(--mat-sys-headline-large);
+		color: var(--mat-sys-tertiary);
+	}
+}
+
+.back-arrow {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: var(--mat-sys-tertiary-container);
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+
+	p {
+		display: flex;
+		justify-content: center;
+		color: var(--mat-sys-on-tertiary-container);
+	}
+}
+
+.body-container {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	margin-bottom: 24px;
+}
+
+.card-container,
+.service-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	h1 {
+		font: var(--mat-sys-body-large);
+		font-size: x-large;
+		font-weight: 300;
+	}
+}
+
+.card-column {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	width: 100%;
+	height: 100%;
 }

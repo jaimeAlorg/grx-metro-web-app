@@ -1,20 +1,22 @@
 <div class="home-container">
 	<app-header></app-header>
 	<div class="content">
-		<div class="line-container">
+		<div class="line-container" *ngIf="!isMobileView || !showStationData">
 			<ul class="list-line">
 				<li class="list-item" *ngFor="let station of stationList">
 					<div class="bullet-container">
 						<div class="bullet"></div>
-						<div class="station-wrapper">
-							<a (click)="toggleStation(station)">{{ station }}</a>
-							<app-station-page
-								*ngIf="station === selectedStation"
-							></app-station-page>
-						</div>
+						<a (click)="toggleStation(station)">{{ station }}</a>
 					</div>
 				</li>
 			</ul>
+		</div>
+		<div class="station-wrapper" *ngIf="!isMobileView || showStationData">
+			<app-station-page
+				[station]="selectedStation"
+				[isMobileView]="isMobileView"
+				(goBackToListEvent)="goBackToList($event)"
+			></app-station-page>
 		</div>
 	</div>
 	<app-footer></app-footer>

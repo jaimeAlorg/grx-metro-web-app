@@ -1,9 +1,8 @@
 .map {
-	// Change height and width to adjust the size of the map for movile
 	height: 25vh;
-	width: 90%;
+	width: 100%;
 	border-radius: 8px;
 	border-width: 1px;
-	border-color: #000;
+	border-color: var(--mat-sys-tertiary-container);
 	border-style: solid;
 }

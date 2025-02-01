@@ -1,0 +1,21 @@
+.services-container {
+	width: 100%;
+}
+
+.services-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.service-item {
+	font: var(--mat-sys-body-large);
+	display: flex;
+	align-items: center;
+	padding: 5px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.material-symbols-outlined {
+	margin-right: 8px;
+}

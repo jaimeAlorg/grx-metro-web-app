@@ -1,0 +1,41 @@
+.time-card-container {
+	display: flex;
+	flex-direction: column;
+	width: 20vw;
+	background-color: var(--mat-sys-tertiary-container);
+	border-color: var(--mat-sys-tertiary-container);
+
+	@media (max-width: 600px) {
+		width: 40vw;
+	}
+}
+
+.card-header,
+.time {
+	font: var(--mat-sys-body-large);
+}
+
+.card-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.minutes,
+.station {
+	font: var(--mat-sys-body-large);
+	color: var(--mat-sys-tertiary);
+	font-size: larger;
+}
+
+.station {
+	padding: 16px 32px 0 0;
+}
+
+.mat-mdc-card-content:last-child {
+	padding-bottom: 8px;
+}
+
+.mat-mdc-card-content:first-child {
+	padding-top: 8px;
+}

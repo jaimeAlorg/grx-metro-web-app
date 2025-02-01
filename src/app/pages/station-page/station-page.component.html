@@ -1,3 +1,28 @@
 <div class="station-page-container">
+	<div class="station-header">
+		<h1>{{ station }}</h1>
+		<div class="back-arrow" *ngIf="isMobileView" (click)="goBackToList()"><p>←</p></div>
+	</div>
 	<app-station-map class="station-page-map"></app-station-map>
+	<div class="body-container">
+		<div class="card-container">
+			<h1>Next times</h1>
+			<div class="card-column">
+				<app-time-card
+					class="station-page-card"
+					[isMobileView]="isMobileView"
+				></app-time-card>
+				<app-time-card
+					class="station-page-card"
+					[isMobileView]="isMobileView"
+				></app-time-card>
+			</div>
+		</div>
+		<div class="service-container">
+			<h1>Services</h1>
+			<div class="services-column">
+				<app-station-services></app-station-services>
+			</div>
+		</div>
+	</div>
 </div>

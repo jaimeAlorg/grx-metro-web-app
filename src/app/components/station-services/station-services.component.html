@@ -1,1 +1,7 @@
-<p>station-services works!</p>
+<div class="services-container">
+	<ul class="services-list">
+		<li class="service-item" *ngFor="let service of stationServices">
+			<span class="material-symbols-outlined"> home </span>{{ service }}
+		</li>
+	</ul>
+</div>
