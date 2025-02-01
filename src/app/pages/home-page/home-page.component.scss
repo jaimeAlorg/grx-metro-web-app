@@ -6,4 +6,81 @@
 
 .content {
 	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.line-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: 100%;
+
+	//Same width as title container. This way the list is always alligned with the first letter of the title.
+	width: 550px;
+}
+
+.list-line {
+	display: flex;
+	flex-direction: column;
+	color: var(--mat-sys-primary);
+	background-color: var(--mat-sys-primary);
+	height: 100%;
+	width: 15px;
+	padding: 0;
+	margin: 0;
+	margin: 0 0 0 16px;
+	border-radius: 16px;
+	list-style: none;
+}
+
+.list-item {
+	display: flex;
+	width: 100%;
+	background-color: var(--mat-sys-primary);
+	border-radius: 16px;
+}
+
+.bullet-container {
+	display: flex;
+	margin-bottom: 24px;
+	margin-top: 24px;
+}
+
+.bullet {
+	display: flex;
+	width: 40px;
+	height: 12px;
+	border-radius: 16px;
+
+	background-color: var(--mat-sys-primary);
+}
+
+.station-wrapper {
+	margin-bottom: 24px;
+	width: 60vw;
+
+	//vw width overwrites the width of the container. Better than having floating boxes with positions: abosolute.
+	//Option 2, to the side and on mobile display, simulate with an animation a page transition.
+
+	a {
+		display: flex;
+		justify-content: flex-start;
+		margin-left: 16px;
+		font: var(--mat-sys-body-large);
+		font-size: x-large;
+		font-weight: 400;
+		line-height: 12px;
+		white-space: nowrap;
+		cursor: pointer;
+	}
+
+	@media (max-width: 950px) {
+		width: 70vw;
+	}
+
+	@media (max-width: 600px) {
+		width: 80vw;
+	}
 }
