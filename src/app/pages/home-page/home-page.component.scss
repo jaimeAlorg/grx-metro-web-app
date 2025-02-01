@@ -60,14 +60,14 @@
 .station-wrapper {
 	margin-bottom: 24px;
 	width: 60vw;
-
+	margin-left: 16px;
 	//vw width overwrites the width of the container. Better than having floating boxes with positions: abosolute.
 	//Option 2, to the side and on mobile display, simulate with an animation a page transition.
 
 	a {
 		display: flex;
 		justify-content: flex-start;
-		margin-left: 16px;
+
 		font: var(--mat-sys-body-large);
 		font-size: x-large;
 		font-weight: 400;
