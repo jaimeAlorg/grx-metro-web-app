@@ -14,18 +14,24 @@
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	margin-bottom: 8px;
+	margin-bottom: 24px;
 
 	justify-content: center;
 
-	@media (min-width: 601px) and (max-width: 1000px) {
+	@media (min-width: 750px) and (max-width: 1000px) {
 		justify-content: flex-start;
 		margin-left: 20px;
 		width: 50%;
 	}
 
+	@media (max-width: 750px) {
+		width: 50vw;
+		justify-content: center;
+	}
+
 	@media (max-width: 600px) {
-		margin-right: 134px;
+		justify-content: flex-start;
+		margin-left: 32px;
 	}
 }
 
@@ -35,10 +41,10 @@
 	color: var(--mat-sys-primary);
 	background-color: var(--mat-sys-primary);
 	height: 100%;
-	width: 15px;
+	width: 10px;
 	padding: 0;
 	margin: 0;
-	border-radius: 16px;
+	border-radius: 4px;
 	list-style: none;
 }
 
@@ -50,15 +56,15 @@
 
 .bullet-container {
 	display: flex;
-	margin-bottom: 24px;
-	margin-top: 24px;
+	margin-bottom: 16px;
+	margin-top: 16px;
 
 	a {
 		display: flex;
 		justify-content: flex-start;
 
 		font: var(--mat-sys-body-large);
-		font-size: x-large;
+		font-size: large;
 		font-weight: 400;
 		line-height: 12px;
 		margin-left: 12px;
@@ -69,9 +75,9 @@
 
 .bullet {
 	display: flex;
-	width: 40px;
-	height: 12px;
-	border-radius: 16px;
+	width: 32px;
+	height: 8px;
+	border-radius: 4px;
 	background-color: var(--mat-sys-primary);
 }
 
@@ -86,7 +92,7 @@
 		height: 100%;
 		margin: 0 5vw 0 1vw;
 
-		@media (max-width: 600px) {
+		@media (max-width: 750px) {
 			margin: 0 5vw 0 5vw;
 		}
 	}

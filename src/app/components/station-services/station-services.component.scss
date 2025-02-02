@@ -10,12 +10,16 @@
 
 .service-item {
 	font: var(--mat-sys-body-large);
+	color: var(--mat-sys-on-tertiary-fixed);
 	display: flex;
 	align-items: center;
 	padding: 5px 0;
 	border-bottom: 1px solid #ccc;
+	border-color: var(--mat-sys-on-tertiary-fixed);
 }
 
 .material-symbols-outlined {
 	margin-right: 8px;
+	//TO DO: change the color dynamically per icon
+	color: var(--mat-sys-primary);
 }
