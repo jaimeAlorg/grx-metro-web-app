@@ -34,14 +34,24 @@
 }
 
 .station {
-	padding: 16px 32px 0 0;
+	padding: 16px 16px 0 0;
+	display: flex;
+	align-items: center;
 
 	@media (max-width: 1000px) {
 		font-size: large;
 		padding-right: 16px;
 	}
+
+	.mat-icon {
+		margin-left: 8px;
+	}
 }
 
 .mat-mdc-card-content:last-child {
 	padding-bottom: 8px;
+}
+
+.header-icon {
+	margin-left: 8px;
 }

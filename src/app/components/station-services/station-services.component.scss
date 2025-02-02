@@ -18,8 +18,6 @@
 	border-color: var(--mat-sys-on-tertiary-fixed);
 }
 
-.material-symbols-outlined {
-	margin-right: 8px;
-	//TO DO: change the color dynamically per icon
-	color: var(--mat-sys-primary);
+.service-item {
+	gap: 8px;
 }

@@ -1,7 +1,10 @@
 <div class="services-container">
 	<ul class="services-list">
 		<li class="service-item" *ngFor="let service of stationServices">
-			<span class="material-symbols-outlined"> home </span>{{ service }}
+			<mat-icon class="material-icons-outlined" [ngStyle]="{ color: service.color }">{{
+				service.icon
+			}}</mat-icon>
+			{{ service.serviceName }}
 		</li>
 	</ul>
 </div>

@@ -1,12 +1,37 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input, type OnChanges, type OnInit, type SimpleChanges } from '@angular/core';
+import stationsData from '../../data//station-data.json';
+import { MatIconModule } from '@angular/material/icon';
+
+interface Service {
+  serviceName: string;
+  color: string;
+  icon: string;
+}
 
 @Component({
   selector: 'app-station-services',
-  imports: [CommonModule],
+  imports: [CommonModule, MatIconModule],
   templateUrl: './station-services.component.html',
   styleUrl: './station-services.component.scss'
 })
-export class StationServicesComponent {
-  stationServices: string[] = ['Service 1', 'Service 2', 'Service 3', 'Service 4', 'Service 5'];
+export class StationServicesComponent implements OnInit, OnChanges {
+  @Input() station: string = '';
+  stationServices: Service[] = [];
+
+  ngOnInit(): void {
+    this.selectStationService();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['station']) {
+      this.selectStationService();
+    }
+  }
+
+  selectStationService(): void {
+    const stationData: any = stationsData.find((station) => station.name === this.station);
+    this.stationServices = stationData.services;
+  }
 }
+

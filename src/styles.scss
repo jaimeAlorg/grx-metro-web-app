@@ -1,5 +1,6 @@
 @use "@angular/material" as mat;
 @use "./app/styles/_theme-colors.scss" as my_theme;
+@import "https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp";
 
 html {
 	@include mat.theme(

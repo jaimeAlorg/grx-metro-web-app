@@ -1,9 +1,17 @@
 <mat-card appearance="outlined" class="time-card-container">
-	<mat-card-header class="card-header">Estación de Ferrocarril</mat-card-header>
+	<mat-card-header class="card-header"
+		>{{ this.headerName
+		}}<mat-icon *ngIf="isMobileView" class="material-icons-outlined header-icon">{{
+			arrowIcon
+		}}</mat-icon></mat-card-header
+	>
 	<div class="card-content">
 		<mat-card-content class="minutes">3' | 2'</mat-card-content>
 		<mat-card-content class="station" *ngIf="!isMobileView"
-			>Albolote ↑</mat-card-content
+			>{{ endStation }}
+			<mat-icon class="material-icons-outlined">{{
+				arrowIcon
+			}}</mat-icon></mat-card-content
 		>
 	</div>
 	<div class="card-content-2">
