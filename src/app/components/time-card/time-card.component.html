@@ -6,7 +6,9 @@
 		}}</mat-icon></mat-card-header
 	>
 	<div class="card-content">
-		<mat-card-content class="minutes">3' | 2'</mat-card-content>
+		<mat-card-content class="minutes">
+			{{ stationTimes.time1 }} | {{ stationTimes.time2 }}</mat-card-content
+		>
 		<mat-card-content class="station" *ngIf="!isMobileView"
 			>{{ endStation }}
 			<mat-icon class="material-icons-outlined">{{

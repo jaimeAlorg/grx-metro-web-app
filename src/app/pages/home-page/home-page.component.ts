@@ -3,10 +3,22 @@ import { HeaderComponent } from "../../components/header/header.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 import { CommonModule } from '@angular/common';
 import { StationPageComponent } from "../station-page/station-page.component";
+import { WebSocketService } from '../../services/web-socket.service';
+import { Subscription } from 'rxjs';
+import { MatDividerModule } from '@angular/material/divider';
+
+export interface StationData {
+  id: number;
+  stationName: string;
+  timeAlbolote1: string;
+  timeAlbolote2: string;
+  timeArmilla1: string;
+  timeArmilla2: string;
+}
 
 @Component({
   selector: 'app-home-page',
-  imports: [HeaderComponent, FooterComponent, CommonModule, StationPageComponent],
+  imports: [HeaderComponent, FooterComponent, CommonModule, StationPageComponent, MatDividerModule],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })
@@ -44,9 +56,32 @@ export class HomePageComponent implements OnInit {
   isMobileView: boolean = false;
 
   MOBILE_VIEW_WIDTH: number = 750;
+  stationData: StationData = {
+    id: 0,
+    stationName: '',
+    timeAlbolote1: '',
+    timeAlbolote2: '',
+    timeArmilla1: '',
+    timeArmilla2: ''
+  };
+
+  private messageSubscription: Subscription | undefined;
+
+  constructor(private webSocketService: WebSocketService) { }
 
   ngOnInit(): void {
+    this.sendMessage(this.selectedStation);
     this.checkViewport();
+    this.messageSubscription = this.webSocketService.getMessage().subscribe((data: any) => {
+      this.stationData = {
+        id: data.id,
+        stationName: data.stationName,
+        timeAlbolote1: data.timeAlbolote1,
+        timeAlbolote2: data.timeAlbolote2,
+        timeArmilla1: data.timeArmilla1,
+        timeArmilla2: data.timeArmilla2
+      };
+    });
   }
 
   @HostListener('window:resize', ['$event'])
@@ -65,11 +100,17 @@ export class HomePageComponent implements OnInit {
   toggleStation(station: string): void {
     this.selectedStation = station;
     this.showStationData = true;
+    this.sendMessage(station);
     this.scrollToTop();
+
   }
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  sendMessage(station: string): void {
+    this.webSocketService.sendMessage(station);
   }
 
 }
