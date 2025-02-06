@@ -4,7 +4,7 @@ import { FooterComponent } from "../../components/footer/footer.component";
 import { CommonModule } from '@angular/common';
 import { StationPageComponent } from "../station-page/station-page.component";
 import { WebSocketService } from '../../services/web-socket.service';
-import { Subscription } from 'rxjs';
+import { Subscription, interval, startWith, switchMap } from 'rxjs';
 import { MatDividerModule } from '@angular/material/divider';
 import { TrainLocationComponent } from '../../components/train-location/train-location.component';
 import { ScheduleInformationComponent } from '../../components/schedule-information/schedule-information.component';
@@ -74,7 +74,10 @@ export class HomePageComponent implements OnInit, OnDestroy {
     timeArmilla2: ''
   };
 
+  wsInterval: number = 20000;
+
   private messageSubscription: Subscription | undefined;
+  private updateSubscription: Subscription | undefined;
 
   constructor(private webSocketService: WebSocketService) { }
 
@@ -90,13 +93,20 @@ export class HomePageComponent implements OnInit, OnDestroy {
         timeArmilla1: data.timeArmilla1,
         timeArmilla2: data.timeArmilla2
       };
-
-      //TODO: Send again the message to keep the connection alive
     });
+
+    this.updateSubscription = interval(this.wsInterval).pipe(
+      startWith(0),
+      switchMap(() => {
+        this.sendMessage(this.selectedStation);
+        return [];
+      })
+    ).subscribe();
   }
 
   ngOnDestroy(): void {
     this.messageSubscription?.unsubscribe();
+    this.updateSubscription?.unsubscribe();
     this.webSocketService.closeConnection();
   }
 
