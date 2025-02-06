@@ -6,7 +6,11 @@
 				<li class="list-item" *ngFor="let station of stationList">
 					<div class="bullet-container">
 						<div class="bullet"></div>
-						<a (click)="toggleStation(station)">{{ station }}</a>
+						<a
+							(click)="toggleStation(station)"
+							[class.selected]="station === selectedStation && !isMobileView"
+							>{{ station }}</a
+						>
 					</div>
 				</li>
 			</ul>
@@ -18,6 +22,14 @@
 				[stationData]="stationData"
 				(goBackToListEvent)="goBackToList($event)"
 			></app-station-page>
+			<div class="information-wrapper-narrow" *ngIf="isNarrowScreen">
+				<app-train-location *ngIf="!isMobileView"></app-train-location>
+				<app-schedule-information></app-schedule-information>
+			</div>
+		</div>
+		<div class="information-wrapper" *ngIf="!isNarrowScreen">
+			<app-train-location></app-train-location>
+			<app-schedule-information></app-schedule-information>
 		</div>
 	</div>
 	<app-footer></app-footer>

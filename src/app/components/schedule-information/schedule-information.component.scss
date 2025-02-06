@@ -1,0 +1,49 @@
+@use "../../../styles.scss" as styles;
+
+.schedule-container {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--mat-sys-tertiary-container);
+	box-shadow: styles.$box-shadow;
+	padding: 16px;
+	border-radius: styles.$box-radius;
+
+	h1 {
+		margin-top: 0;
+		margin-bottom: 16px;
+		font: var(--mat-sys-headline-large);
+		color: var(--mat-sys-tertiary);
+	}
+}
+
+.schedule-content {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.schedule-row {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	font: var(--mat-sys-body-large);
+	font-size: large;
+	font-weight: 300;
+
+	@media (max-width: styles.$text-breaking-point) {
+		font-size: medium;
+	}
+}
+
+.schedule-day {
+	color: var(--mat-sys-on-tertiary-container);
+	flex: 1;
+}
+
+.schedule-time {
+	color: var(--mat-sys-tertiary);
+	font-weight: 500;
+
+	min-width: 120px;
+	text-align: left;
+}

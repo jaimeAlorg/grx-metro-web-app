@@ -1,7 +1,5 @@
 @use "@angular/material" as mat;
-
-$breakpoint-medium: 600px;
-$breakpoint-small: 450px;
+@use "../../../styles.scss" as styles;
 
 .header-container {
 	display: flex;
@@ -9,18 +7,26 @@ $breakpoint-small: 450px;
 	gap: 10px;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: auto;
 	height: 100%;
+
+	margin-left: 24px;
+	margin-right: 24px;
+
+	@media (max-width: styles.$mobile-breaking-point) {
+		font: var(--mat-sys-display-small);
+		margin: 0;
+	}
 
 	h1 {
 		color: var(--mat-sys-primary);
 		font: var(--mat-sys-display-large);
 
-		@media (max-width: $breakpoint-medium) {
+		@media (max-width: styles.$tablet-breaking-point) {
 			font: var(--mat-sys-display-medium);
 		}
 
-		@media (max-width: $breakpoint-small) {
+		@media (max-width: styles.$mobile-breaking-point) {
 			font: var(--mat-sys-display-small);
 		}
 	}
@@ -31,7 +37,7 @@ $breakpoint-small: 450px;
 	height: 100px;
 	vertical-align: middle;
 
-	@media (max-width: $breakpoint-small) {
+	@media (max-width: styles.$mobile-breaking-point) {
 		width: 75px;
 		height: 75px;
 	}

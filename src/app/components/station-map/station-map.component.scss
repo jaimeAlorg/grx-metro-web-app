@@ -1,8 +1,8 @@
+@use "../../../styles.scss" as styles;
+
 .map {
 	height: 25vh;
 	width: 100%;
-	border-radius: 8px;
-	border-width: 1px;
-	border-color: var(--mat-sys-tertiary-container);
-	border-style: solid;
+	border-radius: styles.$box-radius;
+	box-shadow: styles.$box-shadow;
 }
