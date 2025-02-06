@@ -59,8 +59,10 @@ export class HomePageComponent implements OnInit, OnDestroy {
   showStationData: boolean = false;
   isMobileView: boolean = false;
   isNarrowScreen: boolean = false;
+  isFullInformationSectionVisible: boolean = false;
 
   //TODO Change name to constants
+  INFORMATION_SECTION_WIDTH: number = 700;
   MOBILE_VIEW_WIDTH: number = 940;
   NARROW_SCREEN_WIDTH: number = 1350;
   stationData: StationData = {
@@ -106,6 +108,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
   checkViewport(): void {
     this.isMobileView = window.innerWidth < this.MOBILE_VIEW_WIDTH;
     this.isNarrowScreen = window.innerWidth < this.NARROW_SCREEN_WIDTH;
+    this.isFullInformationSectionVisible = window.innerWidth > this.INFORMATION_SECTION_WIDTH;
   }
 
   goBackToList($event: boolean): void {

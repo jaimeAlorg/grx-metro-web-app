@@ -23,7 +23,9 @@
 				(goBackToListEvent)="goBackToList($event)"
 			></app-station-page>
 			<div class="information-wrapper-narrow" *ngIf="isNarrowScreen">
-				<app-train-location *ngIf="!isMobileView"></app-train-location>
+				<app-train-location
+					*ngIf="isFullInformationSectionVisible"
+				></app-train-location>
 				<app-schedule-information></app-schedule-information>
 			</div>
 		</div>
