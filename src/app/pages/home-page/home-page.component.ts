@@ -8,6 +8,7 @@ import { Subscription, interval, startWith, switchMap } from 'rxjs';
 import { MatDividerModule } from '@angular/material/divider';
 import { TrainLocationComponent } from '../../components/train-location/train-location.component';
 import { ScheduleInformationComponent } from '../../components/schedule-information/schedule-information.component';
+import stationDataJSON from '../../data/station-data.json';
 
 export interface StationData {
   id: number;
@@ -16,6 +17,10 @@ export interface StationData {
   timeAlbolote2: string;
   timeArmilla1: string;
   timeArmilla2: string;
+  arrivalTimeAlbolote1: string;
+  arrivalTimeAlbolote2: string;
+  arrivalTimeArmilla1: string;
+  arrivalTimeArmilla2: string;
 }
 
 @Component({
@@ -25,43 +30,13 @@ export interface StationData {
   styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent implements OnInit, OnDestroy {
-
-  //TODO, build the list from the json file
-  stationList: string[] = [
-    'Albolote',
-    'Juncaril',
-    'Vicuña',
-    'Anfiteatro',
-    'Maracena',
-    'Cerrillo de Maracena',
-    'Jaén',
-    'Estación de autobuses',
-    'Argentinita',
-    'Luís Amador',
-    'Villarejo',
-    'Caleta',
-    'Estación de ferrocarril',
-    'Universidad',
-    'Méndez Núñez',
-    'Recogidas',
-    'Alcázar Genil',
-    'Hípica',
-    'Andrés Segovia',
-    'Palacio de deportes',
-    'Nuevo Los Cármenes',
-    'Dílar',
-    'Parque tecnológico',
-    'Sierra Nevada',
-    'Fernando de los Ríos',
-    'Armilla',
-  ];
+  stationList: string[] = [];
   selectedStation: string = 'Albolote';
   showStationData: boolean = false;
   isMobileView: boolean = false;
   isNarrowScreen: boolean = false;
   isFullInformationSectionVisible: boolean = false;
 
-  //TODO Change name to constants
   INFORMATION_SECTION_WIDTH: number = 700;
   MOBILE_VIEW_WIDTH: number = 940;
   NARROW_SCREEN_WIDTH: number = 1350;
@@ -71,7 +46,11 @@ export class HomePageComponent implements OnInit, OnDestroy {
     timeAlbolote1: '',
     timeAlbolote2: '',
     timeArmilla1: '',
-    timeArmilla2: ''
+    timeArmilla2: '',
+    arrivalTimeAlbolote1: '',
+    arrivalTimeAlbolote2: '',
+    arrivalTimeArmilla1: '',
+    arrivalTimeArmilla2: ''
   };
 
   wsInterval: number = 20000;
@@ -79,7 +58,9 @@ export class HomePageComponent implements OnInit, OnDestroy {
   private messageSubscription: Subscription | undefined;
   private updateSubscription: Subscription | undefined;
 
-  constructor(private webSocketService: WebSocketService) { }
+  constructor(private webSocketService: WebSocketService) {
+    this.stationList = stationDataJSON.map((station: any) => station.name);
+  }
 
   ngOnInit(): void {
     this.sendMessage(this.selectedStation);
@@ -91,7 +72,11 @@ export class HomePageComponent implements OnInit, OnDestroy {
         timeAlbolote1: data.timeAlbolote1,
         timeAlbolote2: data.timeAlbolote2,
         timeArmilla1: data.timeArmilla1,
-        timeArmilla2: data.timeArmilla2
+        timeArmilla2: data.timeArmilla2,
+        arrivalTimeAlbolote1: data.arrivalTimeAlbolote1,
+        arrivalTimeAlbolote2: data.arrivalTimeAlbolote2,
+        arrivalTimeArmilla1: data.arrivalTimeArmilla1,
+        arrivalTimeArmilla2: data.arrivalTimeArmilla2
       };
     });
 

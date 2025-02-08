@@ -1,6 +1,6 @@
 import { Component, type AfterViewInit, type OnInit, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 import * as L from 'leaflet';
-import stationData from '../../data/station-data.json';
+import stationDataJSON from '../../data/station-data.json';
 
 @Component({
   selector: 'app-station-map',
@@ -39,7 +39,7 @@ export class StationMapComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   private loadCoordinates(): void {
-    const coordinates = stationData.find((station) => station.name === this.station)?.coordinates || [];
+    const coordinates = stationDataJSON.find((station) => station.name === this.station)?.coordinates || [];
     this.latitud = coordinates[0];
     this.longitud = coordinates[1];
   }

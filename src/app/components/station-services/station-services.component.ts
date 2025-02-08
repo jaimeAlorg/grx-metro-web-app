@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, type OnChanges, type OnInit, type SimpleChanges } from '@angular/core';
-import stationsData from '../../data//station-data.json';
+import stationsDataJSON from '../../data//station-data.json';
 import { MatIconModule } from '@angular/material/icon';
 
 interface Service {
@@ -30,7 +30,7 @@ export class StationServicesComponent implements OnInit, OnChanges {
   }
 
   selectStationService(): void {
-    const stationData: any = stationsData.find((station) => station.name === this.station);
+    const stationData: any = stationsDataJSON.find((station) => station.name === this.station);
     this.stationServices = stationData.services;
   }
 }

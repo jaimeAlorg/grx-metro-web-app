@@ -6,8 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 interface StationTimes {
   time1: string;
   time2: string;
-  calculatedTime1: string;
-  calculatedTime2: string;
+  arrivalTime1: string;
+  arrivalTime2: string;
 }
 
 @Component({
@@ -25,8 +25,8 @@ export class TimeCardComponent implements OnInit, OnChanges {
   stationTimes: StationTimes = {
     time1: '',
     time2: '',
-    calculatedTime1: '',
-    calculatedTime2: ''
+    arrivalTime1: '',
+    arrivalTime2: ''
   }
 
   ngOnInit(): void {
@@ -43,9 +43,14 @@ export class TimeCardComponent implements OnInit, OnChanges {
     if (this.isWayToAlbolote) {
       this.stationTimes.time1 = this.stationData.timeAlbolote1;
       this.stationTimes.time2 = this.stationData.timeAlbolote2;
+      this.stationTimes.arrivalTime1 = this.stationData.arrivalTimeAlbolote1;
+      this.stationTimes.arrivalTime2 = this.stationData.arrivalTimeAlbolote2;
+
     } else {
       this.stationTimes.time1 = this.stationData.timeArmilla1;
       this.stationTimes.time2 = this.stationData.timeArmilla2;
+      this.stationTimes.arrivalTime1 = this.stationData.arrivalTimeArmilla1;
+      this.stationTimes.arrivalTime2 = this.stationData.arrivalTimeArmilla2;
     }
   }
 
