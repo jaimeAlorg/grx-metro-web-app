@@ -59,7 +59,6 @@ export class HomePageComponent implements OnInit, OnDestroy {
   wsInterval: number = 20000;
 
   private messageSubscription: Subscription | undefined;
-  private updateSubscription: Subscription | undefined;
 
   constructor(private webSocketService: WebSocketService) {
     this.stationList = stationDataJSON.map((station: any) => station.name);
@@ -82,19 +81,10 @@ export class HomePageComponent implements OnInit, OnDestroy {
         arrivalTimeArmilla2: data.arrivalTimeArmilla2
       };
     });
-
-    this.updateSubscription = interval(this.wsInterval).pipe(
-      startWith(0),
-      switchMap(() => {
-        this.sendMessage(this.selectedStation);
-        return [];
-      })
-    ).subscribe();
   }
 
   ngOnDestroy(): void {
     this.messageSubscription?.unsubscribe();
-    this.updateSubscription?.unsubscribe();
     this.webSocketService.closeConnection();
   }
 
