@@ -1,6 +1,6 @@
 <div class="header-container">
 	<h1 class="header-title">
-		{{ title }} <img class="logo" src="/logo.png" alt="Logo" />
+		{{ title }} <img *ngIf="!isMobileView" class="logo" src="/logo.png" alt="Logo" />
 	</h1>
 	<div class="language-toggle-container">
 		<p>

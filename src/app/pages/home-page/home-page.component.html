@@ -1,24 +1,24 @@
 <div class="home-container">
-	<app-header></app-header>
+	<app-header [isMobileView]="isMobileView"></app-header>
 	<div class="content">
-		<div class="line-container" *ngIf="!isMobileView || !showStationData">
+		<div class="line-container" *ngIf="!isTabletView || !showStationData">
 			<ul class="list-line">
 				<li class="list-item" *ngFor="let station of stationList">
 					<div class="bullet-container">
 						<div class="bullet"></div>
 						<a
 							(click)="toggleStation(station)"
-							[class.selected]="station === selectedStation && !isMobileView"
+							[class.selected]="station === selectedStation && !isTabletView"
 							>{{ station }}</a
 						>
 					</div>
 				</li>
 			</ul>
 		</div>
-		<div class="station-wrapper" *ngIf="!isMobileView || showStationData">
+		<div class="station-wrapper" *ngIf="!isTabletView || showStationData">
 			<app-station-page
 				[station]="selectedStation"
-				[isMobileView]="isMobileView"
+				[isTabletView]="isTabletView"
 				[stationData]="stationData"
 				(goBackToListEvent)="goBackToList($event)"
 			></app-station-page>

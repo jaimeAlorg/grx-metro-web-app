@@ -1,7 +1,7 @@
 <div class="station-page-container">
 	<div class="station-header">
 		<h1>{{ station }}</h1>
-		<div class="back-arrow" *ngIf="isMobileView" (click)="goBackToList()"><p>←</p></div>
+		<div class="back-arrow" *ngIf="isTabletView" (click)="goBackToList()"><p>←</p></div>
 	</div>
 	<app-station-map class="station-page-map" [station]="station"></app-station-map>
 	<div class="body-container">
@@ -11,14 +11,14 @@
 				<app-time-card
 					class="station-page-card"
 					[station]="station"
-					[isMobileView]="isMobileView"
+					[isTabletView]="isTabletView"
 					[isWayToAlbolote]="true"
 					[stationData]="stationData"
 				></app-time-card>
 				<app-time-card
 					class="station-page-card"
 					[station]="station"
-					[isMobileView]="isMobileView"
+					[isTabletView]="isTabletView"
 					[isWayToAlbolote]="false"
 					[stationData]="stationData"
 				></app-time-card>

@@ -14,7 +14,7 @@ import { TranslatePipe } from '../../pipes/translate.pipe';
 })
 export class StationPageComponent {
   @Input() station: string = '';
-  @Input() isMobileView: boolean = false;
+  @Input() isTabletView: boolean = false;
   @Input() stationData: StationData = {
     id: 0,
     stationName: '',

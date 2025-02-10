@@ -17,7 +17,7 @@ interface StationTimes {
   styleUrl: './time-card.component.scss'
 })
 export class TimeCardComponent implements OnInit, OnChanges {
-  @Input() isMobileView: boolean = false;
+  @Input() isTabletView: boolean = false;
   @Input() station: string = '';
   @Input() isWayToAlbolote: boolean = true;
   @Input() stationData: any = {};
@@ -63,6 +63,6 @@ export class TimeCardComponent implements OnInit, OnChanges {
   }
 
   get headerName(): string {
-    return this.isMobileView ? `Dir. ${this.endStation}` : this.station;
+    return this.isTabletView ? `Dir. ${this.endStation}` : this.station;
   }
 }

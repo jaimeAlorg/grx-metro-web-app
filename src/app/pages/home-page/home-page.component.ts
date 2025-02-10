@@ -34,12 +34,15 @@ export class HomePageComponent implements OnInit, OnDestroy {
   selectedStation: string = 'Albolote';
   showStationData: boolean = false;
   isMobileView: boolean = false;
+  isTabletView: boolean = false;
   isNarrowScreen: boolean = false;
   isFullInformationSectionVisible: boolean = false;
 
-  INFORMATION_SECTION_WIDTH: number = 700;
-  MOBILE_VIEW_WIDTH: number = 940;
   NARROW_SCREEN_WIDTH: number = 1350;
+  INFORMATION_SECTION_WIDTH: number = 700;
+  TABLET_VIEW_WIDTH: number = 940;
+  MOBILE_VIEW_WIDTH: number = 600;
+
   stationData: StationData = {
     id: 0,
     stationName: '',
@@ -101,9 +104,10 @@ export class HomePageComponent implements OnInit, OnDestroy {
   }
 
   checkViewport(): void {
-    this.isMobileView = window.innerWidth < this.MOBILE_VIEW_WIDTH;
+    this.isTabletView = window.innerWidth < this.TABLET_VIEW_WIDTH;
     this.isNarrowScreen = window.innerWidth < this.NARROW_SCREEN_WIDTH;
     this.isFullInformationSectionVisible = window.innerWidth > this.INFORMATION_SECTION_WIDTH;
+    this.isMobileView = window.innerWidth < this.MOBILE_VIEW_WIDTH;
   }
 
   goBackToList($event: boolean): void {

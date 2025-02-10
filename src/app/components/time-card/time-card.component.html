@@ -1,7 +1,7 @@
 <mat-card appearance="outlined" class="time-card-container">
 	<mat-card-header class="card-header"
 		>{{ this.headerName
-		}}<mat-icon *ngIf="isMobileView" class="material-icons-outlined header-icon">{{
+		}}<mat-icon *ngIf="isTabletView" class="material-icons-outlined header-icon">{{
 			arrowIcon
 		}}</mat-icon></mat-card-header
 	>
@@ -9,7 +9,7 @@
 		<mat-card-content class="minutes">
 			{{ stationTimes.time1 }} | {{ stationTimes.time2 }}</mat-card-content
 		>
-		<mat-card-content class="station" *ngIf="!isMobileView"
+		<mat-card-content class="station" *ngIf="!isTabletView"
 			>{{ endStation }}
 			<mat-icon class="material-icons-outlined">{{
 				arrowIcon
