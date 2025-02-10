@@ -3,17 +3,17 @@
 		"name": "Albolote",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.228387061595576, -3.653478362785318]
 	},
@@ -21,17 +21,17 @@
 		"name": "Juncaril",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.22307470570922, -3.645982323304716]
 	},
@@ -39,17 +39,17 @@
 		"name": "Vicuña",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.21434175415841, -3.6370479747284024]
 	},
@@ -57,17 +57,17 @@
 		"name": "Anfiteatro",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.211776320215144, -3.6340337539667593]
 	},
@@ -75,17 +75,17 @@
 		"name": "Maracena",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.2367, -3.6415]
 	},
@@ -93,17 +93,17 @@
 		"name": "Cerrillo de Maracena",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.20203495534907, -3.6246782089227008]
 	},
@@ -111,17 +111,17 @@
 		"name": "Jaén",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.20433007091288, -3.6172223596881747]
 	},
@@ -129,17 +129,17 @@
 		"name": "Estación de autobuses",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.20002812142662, -3.6131811154913613]
 	},
@@ -147,17 +147,17 @@
 		"name": "Argentinita",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.195866337829834, -3.615487872981252]
 	},
@@ -165,17 +165,17 @@
 		"name": "Luís Amador",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.192015275093354, -3.6150297490197953]
 	},
@@ -183,17 +183,17 @@
 		"name": "Villarejo",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.18881528938864, -3.6147055362639797]
 	},
@@ -201,17 +201,17 @@
 		"name": "Caleta",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.2367, -3.6415]
 	},
@@ -219,17 +219,17 @@
 		"name": "Estación de ferrocarril",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.1833318491341, -3.608375252851297]
 	},
@@ -237,17 +237,17 @@
 		"name": "Universidad",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.180896534201345, -3.6084852333132127]
 	},
@@ -255,22 +255,22 @@
 		"name": "Méndez Núñez",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 			{
-				"serviceName": "Escaleras mecánicas",
+				"serviceName": "SERVICE_2",
 				"color": "#003FA2",
 				"icon": "escalator"
 			},
-			{ "serviceName": "Ascensor", "color": "#003FA2", "icon": "elevator" },
+			{ "serviceName": "SERVICE_3", "color": "#003FA2", "icon": "elevator" },
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.17675043799543, -3.609893998522954]
 	},
@@ -278,22 +278,22 @@
 		"name": "Recogidas",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 			{
-				"serviceName": "Escaleras mecánicas",
+				"serviceName": "SERVICE_2",
 				"color": "#003FA2",
 				"icon": "escalator"
 			},
-			{ "serviceName": "Ascensor", "color": "#003FA2", "icon": "elevator" },
+			{ "serviceName": "SERVICE_3", "color": "#003FA2", "icon": "elevator" },
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.17009811444283, -3.6057932502772942]
 	},
@@ -301,22 +301,22 @@
 		"name": "Alcázar Genil",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 			{
-				"serviceName": "Escaleras mecánicas",
+				"serviceName": "SERVICE_2",
 				"color": "#003FA2",
 				"icon": "escalator"
 			},
-			{ "serviceName": "Ascensor", "color": "#003FA2", "icon": "elevator" },
+			{ "serviceName": "SERVICE_3", "color": "#003FA2", "icon": "elevator" },
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.16540231857117, -3.6029660599379163]
 	},
@@ -324,16 +324,16 @@
 		"name": "Hípica",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.160833825184724, -3.5965497604105043]
 	},
@@ -341,16 +341,16 @@
 		"name": "Andrés Segovia",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.15825443703681, -3.595385082034554]
 	},
@@ -358,16 +358,16 @@
 		"name": "Palacio de deportes",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.15411408138275, -3.5927187891932832]
 	},
@@ -375,16 +375,16 @@
 		"name": "Nuevo Los Cármenes",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.15104509324584, -3.596283355908116]
 	},
@@ -392,16 +392,16 @@
 		"name": "Dílar",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.14919969125913, -3.6011388027387308]
 	},
@@ -409,16 +409,16 @@
 		"name": "Parque tecnológico",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.149048753051694, -3.606816831818299]
 	},
@@ -426,16 +426,16 @@
 		"name": "Sierra Nevada",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.14395639441761, -3.613960406877079]
 	},
@@ -443,16 +443,16 @@
 		"name": "Fernando de los Ríos",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.14757266935284, -3.6207118093505968]
 	},
@@ -460,16 +460,16 @@
 		"name": "Armilla",
 		"services": [
 			{
-				"serviceName": "Estación accesible",
+				"serviceName": "SERVICE_1",
 				"color": "#003FA2",
 				"icon": "accessible"
 			},
 			{
-				"serviceName": "Cobertura móvil",
+				"serviceName": "SERVICE_4",
 				"color": "FFFFFF",
 				"icon": "signal_cellular_alt"
 			},
-			{ "serviceName": "Defibrilador", "color": "#00803E", "icon": "monitor_heart" }
+			{ "serviceName": "SERVICE_5", "color": "#00803E", "icon": "monitor_heart" }
 		],
 		"coordinates": [37.143762503099474, -3.627142987558449]
 	}

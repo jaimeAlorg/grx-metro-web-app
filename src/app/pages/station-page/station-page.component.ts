@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { TimeCardComponent } from '../../components/time-card/time-card.component';
 import { StationServicesComponent } from "../../components/station-services/station-services.component";
 import type { StationData } from '../home-page/home-page.component';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-station-page',
-  imports: [StationMapComponent, TimeCardComponent, CommonModule, StationServicesComponent],
+  imports: [StationMapComponent, TimeCardComponent, CommonModule, StationServicesComponent, TranslatePipe],
   templateUrl: './station-page.component.html',
   styleUrl: './station-page.component.scss'
 })

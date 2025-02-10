@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { TranslationService } from '../../services/translation-service/translation.service';
 
 @Component({
   selector: 'app-header',
@@ -8,4 +9,15 @@ import { Component, Input } from '@angular/core';
 })
 export class HeaderComponent {
   title: string = 'Metro Granada';
+  currentLanguage: string = 'es';
+  isSpanish: boolean = true;
+
+  constructor(private translationService: TranslationService) { }
+
+  toggleLanguage(language: string) {
+    this.currentLanguage = language;
+    this.isSpanish = language === 'es';
+
+    this.translationService.setLanguage(language);
+  }
 }

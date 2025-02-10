@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, type OnChanges, type OnInit, type SimpleChanges } from '@angular/core';
 import stationsDataJSON from '../../data//station-data.json';
 import { MatIconModule } from '@angular/material/icon';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 interface Service {
   serviceName: string;
@@ -11,7 +12,7 @@ interface Service {
 
 @Component({
   selector: 'app-station-services',
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, MatIconModule, TranslatePipe],
   templateUrl: './station-services.component.html',
   styleUrl: './station-services.component.scss'
 })

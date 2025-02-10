@@ -2,4 +2,21 @@
 	<h1 class="header-title">
 		{{ title }} <img class="logo" src="/logo.png" alt="Logo" />
 	</h1>
+	<div class="language-toggle-container">
+		<p>
+			<a
+				class="toggleLanguage"
+				[class.selected]="isSpanish"
+				(click)="toggleLanguage('es')"
+				>ES
+			</a>
+			|
+			<a
+				class="toggleLanguage"
+				[class.selected]="!isSpanish"
+				(click)="toggleLanguage('en')"
+				>EN</a
+			>
+		</p>
+	</div>
 </div>

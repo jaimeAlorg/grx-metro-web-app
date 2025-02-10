@@ -6,7 +6,7 @@
 	<app-station-map class="station-page-map" [station]="station"></app-station-map>
 	<div class="body-container">
 		<div class="card-container">
-			<h1>Siguientes trenes</h1>
+			<h1>{{ "NEXT_TRAINS" | translate }}</h1>
 			<div class="card-column">
 				<app-time-card
 					class="station-page-card"
@@ -25,7 +25,7 @@
 			</div>
 		</div>
 		<div class="service-container">
-			<h1>Servicios</h1>
+			<h1>{{ "SERVICES" | translate }}</h1>
 			<div class="services-column">
 				<app-station-services [station]="station"></app-station-services>
 			</div>

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import type { Observable } from 'rxjs';
 import { WebSocketSubject, webSocket } from 'rxjs/webSocket';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'

@@ -3,7 +3,7 @@ import { HeaderComponent } from "../../components/header/header.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 import { CommonModule } from '@angular/common';
 import { StationPageComponent } from "../station-page/station-page.component";
-import { WebSocketService } from '../../services/web-socket.service';
+import { WebSocketService } from '../../services/web-socket-service/web-socket.service';
 import { Subscription, interval, startWith, switchMap } from 'rxjs';
 import { MatDividerModule } from '@angular/material/divider';
 import { TrainLocationComponent } from '../../components/train-location/train-location.component';
