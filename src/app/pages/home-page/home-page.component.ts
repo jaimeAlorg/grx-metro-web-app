@@ -4,11 +4,12 @@ import { FooterComponent } from "../../components/footer/footer.component";
 import { CommonModule } from '@angular/common';
 import { StationPageComponent } from "../station-page/station-page.component";
 import { WebSocketService } from '../../services/web-socket-service/web-socket.service';
-import { Subscription, interval, startWith, switchMap } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { MatDividerModule } from '@angular/material/divider';
 import { TrainLocationComponent } from '../../components/train-location/train-location.component';
 import { ScheduleInformationComponent } from '../../components/schedule-information/schedule-information.component';
 import stationDataJSON from '../../data/station-data.json';
+import { LocalStorageService } from '../../services/local-storage-service/local-storage.service';
 
 export interface StationData {
   id: number;
@@ -34,6 +35,7 @@ export interface StationData {
 export class HomePageComponent implements OnInit, OnDestroy {
   stationList: string[] = [];
   selectedStation: string = 'Albolote';
+  currentLanguage: string = 'es';
   showStationData: boolean = false;
   isMobileView: boolean = false;
   isTabletView: boolean = false;
@@ -62,8 +64,14 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   private messageSubscription: Subscription | undefined;
 
-  constructor(private webSocketService: WebSocketService) {
+  constructor(private webSocketService: WebSocketService, private localStorageService: LocalStorageService) {
     this.stationList = stationDataJSON.map((station: any) => station.name);
+
+    const lastSeenStation = this.localStorageService.getLastSeenStation();
+    this.selectedStation = lastSeenStation ?? this.selectedStation;
+
+    const language = this.localStorageService.getLanguage();
+    this.currentLanguage = language ?? this.currentLanguage;
   }
 
   ngOnInit(): void {
@@ -112,6 +120,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
     this.selectedStation = station;
     this.showStationData = true;
     this.sendMessage(station);
+    this.localStorageService.saveLastSeenStation(station);
     this.scrollToTop();
 
   }

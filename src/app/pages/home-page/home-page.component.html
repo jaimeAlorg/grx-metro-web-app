@@ -1,5 +1,8 @@
 <div class="home-container">
-	<app-header [isMobileView]="isMobileView"></app-header>
+	<app-header
+		[isMobileView]="isMobileView"
+		[currentLanguage]="currentLanguage"
+	></app-header>
 	<div class="content">
 		<div class="line-container" *ngIf="!isTabletView || !showStationData">
 			<ul class="list-line">
