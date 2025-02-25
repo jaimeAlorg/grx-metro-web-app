@@ -26,6 +26,8 @@ export class StationPageComponent {
     arrivalTimeAlbolote2: '',
     arrivalTimeArmilla1: '',
     arrivalTimeArmilla2: '',
+    currentStationToAlbolote: '',
+    currentStationToArmilla: ''
   };
   @Output() goBackToListEvent = new EventEmitter<boolean>();
 

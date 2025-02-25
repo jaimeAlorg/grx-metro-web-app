@@ -22,15 +22,28 @@
 				[stationData]="stationData"
 				(goBackToListEvent)="goBackToList($event)"
 			></app-station-page>
-			<div class="information-wrapper-narrow" *ngIf="isNarrowScreen">
+			<div
+				[ngClass]="{
+					'information-wrapper-narrow': isNarrowScreen,
+					'information-wrapper-mobile': isMobileView,
+				}"
+				*ngIf="isNarrowScreen || isMobileView"
+			>
 				<app-train-location
-					*ngIf="isFullInformationSectionVisible"
+					class="train-location-narrow"
+					[trainToAlbolote]="stationData.currentStationToAlbolote"
+					[trainToArmilla]="stationData.currentStationToArmilla"
 				></app-train-location>
-				<app-schedule-information></app-schedule-information>
+				<app-schedule-information
+					class="train-schedule-narrow"
+				></app-schedule-information>
 			</div>
 		</div>
 		<div class="information-wrapper" *ngIf="!isNarrowScreen">
-			<app-train-location></app-train-location>
+			<app-train-location
+				[trainToAlbolote]="stationData.currentStationToAlbolote"
+				[trainToArmilla]="stationData.currentStationToArmilla"
+			></app-train-location>
 			<app-schedule-information></app-schedule-information>
 		</div>
 	</div>

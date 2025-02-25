@@ -10,7 +10,6 @@
 	flex: 1;
 	display: flex;
 	flex-direction: row;
-	//Bien
 	margin: 0px 24px 32px 24px;
 	gap: 24px;
 
@@ -131,18 +130,24 @@
 	display: flex;
 	flex-direction: row;
 	gap: 20px;
+}
 
-	app-train-location {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
+.information-wrapper-mobile {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
 
-	app-schedule-information {
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		justify-content: center;
-	}
+.train-location-narrow {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.train-schedule-narrow {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
 }

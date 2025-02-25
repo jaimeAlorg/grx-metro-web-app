@@ -21,6 +21,8 @@ export interface StationData {
   arrivalTimeAlbolote2: string;
   arrivalTimeArmilla1: string;
   arrivalTimeArmilla2: string;
+  currentStationToAlbolote: string;
+  currentStationToArmilla: string;
 }
 
 @Component({
@@ -53,10 +55,10 @@ export class HomePageComponent implements OnInit, OnDestroy {
     arrivalTimeAlbolote1: '',
     arrivalTimeAlbolote2: '',
     arrivalTimeArmilla1: '',
-    arrivalTimeArmilla2: ''
+    arrivalTimeArmilla2: '',
+    currentStationToAlbolote: '',
+    currentStationToArmilla: ''
   };
-
-  wsInterval: number = 20000;
 
   private messageSubscription: Subscription | undefined;
 
@@ -78,7 +80,9 @@ export class HomePageComponent implements OnInit, OnDestroy {
         arrivalTimeAlbolote1: data.arrivalTimeAlbolote1,
         arrivalTimeAlbolote2: data.arrivalTimeAlbolote2,
         arrivalTimeArmilla1: data.arrivalTimeArmilla1,
-        arrivalTimeArmilla2: data.arrivalTimeArmilla2
+        arrivalTimeArmilla2: data.arrivalTimeArmilla2,
+        currentStationToAlbolote: data.currentStationToAlbolote,
+        currentStationToArmilla: data.currentStationToArmilla
       };
     });
   }
