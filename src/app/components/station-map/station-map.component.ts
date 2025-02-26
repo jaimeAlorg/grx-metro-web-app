@@ -31,14 +31,13 @@ export class StationMapComponent implements OnInit, AfterViewInit, OnChanges {
     }
   }
 
-
   private loadMap(): void {
     this.initMap();
     this.addMarker();
     this.centerMap();
   }
 
-  private loadCoordinates(): void {
+  loadCoordinates(): void {
     const coordinates = stationDataJSON.find((station) => station.name === this.station)?.coordinates || [];
     this.latitud = coordinates[0];
     this.longitud = coordinates[1];

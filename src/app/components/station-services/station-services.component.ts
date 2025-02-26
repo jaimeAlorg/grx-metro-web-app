@@ -32,7 +32,7 @@ export class StationServicesComponent implements OnInit, OnChanges {
 
   selectStationService(): void {
     const stationData: any = stationsDataJSON.find((station) => station.name === this.station);
-    this.stationServices = stationData.services;
+    this.stationServices = stationData?.services ?? [];
   }
 }
 
