@@ -77,27 +77,34 @@ export class HomePageComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.sendMessage(this.selectedStation);
     this.checkViewport();
-    this.messageSubscription = this.webSocketService.getMessage().subscribe((data: any) => {
-      this.stationData = {
-        id: data.id,
-        stationName: data.stationName,
-        timeAlbolote1: data.timeAlbolote1,
-        timeAlbolote2: data.timeAlbolote2,
-        timeArmilla1: data.timeArmilla1,
-        timeArmilla2: data.timeArmilla2,
-        arrivalTimeAlbolote1: data.arrivalTimeAlbolote1,
-        arrivalTimeAlbolote2: data.arrivalTimeAlbolote2,
-        arrivalTimeArmilla1: data.arrivalTimeArmilla1,
-        arrivalTimeArmilla2: data.arrivalTimeArmilla2,
-        currentStationToAlbolote: data.currentStationToAlbolote,
-        currentStationToArmilla: data.currentStationToArmilla
-      };
-    });
+    this.webSocketSusbription();
   }
 
   ngOnDestroy(): void {
     this.messageSubscription?.unsubscribe();
     this.webSocketService.closeConnection();
+  }
+
+  webSocketSusbription(): void {
+    this.messageSubscription = this.webSocketService.getMessage().subscribe({
+      next: (data: any) => {
+        this.stationData = {
+          id: data.id,
+          stationName: data.stationName,
+          timeAlbolote1: data.timeAlbolote1,
+          timeAlbolote2: data.timeAlbolote2,
+          timeArmilla1: data.timeArmilla1,
+          timeArmilla2: data.timeArmilla2,
+          arrivalTimeAlbolote1: data.arrivalTimeAlbolote1,
+          arrivalTimeAlbolote2: data.arrivalTimeAlbolote2,
+          arrivalTimeArmilla1: data.arrivalTimeArmilla1,
+          arrivalTimeArmilla2: data.arrivalTimeArmilla2,
+          currentStationToAlbolote: data.currentStationToAlbolote,
+          currentStationToArmilla: data.currentStationToArmilla,
+        };
+      },
+      error: err => console.error('WebSocket message error:', err)
+    });
   }
 
   @HostListener('window:resize', ['$event'])
