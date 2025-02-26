@@ -13,12 +13,12 @@ export const TRANSLATIONS: { [language: string]: { [key: string]: string } } = {
         SERVICE_3: 'Ascensores',
         SERVICE_4: 'Cobertura móvil',
         SERVICE_5: 'Desfibrilador',
-        FROM: 'Desde',
+        TO: 'Hacia',
     },
     en: {
         NEXT_TRAINS: 'Next trains',
         SERVICES: 'Services',
-        LOCATION: 'Trains on the way',
+        LOCATION: 'Train on the way',
         SCHEDULE: 'Schedule',
         SCHEDULE_DAYS_1: 'Monday to Thursday',
         SCHEDULE_DAYS_2: 'Friday and holiday eves',
@@ -29,6 +29,6 @@ export const TRANSLATIONS: { [language: string]: { [key: string]: string } } = {
         SERVICE_3: 'Elevators',
         SERVICE_4: 'Mobile coverage',
         SERVICE_5: 'Defibrillator',
-        FROM: 'From',
+        TO: 'To',
     },
 };
