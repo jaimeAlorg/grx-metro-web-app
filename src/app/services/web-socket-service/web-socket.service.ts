@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { switchMap, type Observable, retryWhen, timer, retry } from "rxjs";
+import { type Observable, timer, retry } from "rxjs";
 import { WebSocketSubject, webSocket } from "rxjs/webSocket";
 import { environment } from "../../../environments/environment";
 
