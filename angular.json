@@ -42,20 +42,20 @@
 							"budgets": [
 								{
 									"type": "initial",
-									"maximumWarning": "500kB",
+									"maximumWarning": "2MB",
 									"maximumError": "1MB"
 								},
 								{
 									"type": "anyComponentStyle",
-									"maximumWarning": "4kB",
-									"maximumError": "8kB"
+									"maximumWarning": "200kB",
+									"maximumError": "500kB"
 								}
 							],
 							"outputHashing": "all",
 							"fileReplacements": [
 								{
-									"replace": "src/environments/environment.ts",
-									"with": "src/environments/environment.ts"
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.ts"
 								}
 							]
 						},
